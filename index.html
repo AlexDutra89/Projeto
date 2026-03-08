@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Conecta Tutor | Projeto Inicial</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div id="app" style="max-width: 800px; margin: auto;">
+    <h1>Conecta Tutor</h1>
+
+    <section id="auth-section" class="card">
+        <div id="login-box">
+            <h2>Login</h2>
+            <input type="email" id="l-email" placeholder="E-mail">
+            <input type="password" id="l-senha" placeholder="Senha">
+            <button onclick="fazerLogin()">Entrar</button>
+            <button onclick="alternarAuth()" style="background:#666">Criar Conta (Aluno)</button>
+        </div>
+
+        <div id="reg-box" class="hidden">
+            <h2>Cadastro Aluno</h2>
+            <input type="text" id="r-nome" placeholder="Nome">
+            <input type="email" id="r-email" placeholder="E-mail">
+            <input type="password" id="r-senha" placeholder="Senha">
+            <button onclick="salvarCadastro()">Finalizar Cadastro</button>
+            <button onclick="alternarAuth()" style="background:#666">Voltar ao Login</button>
+        </div>
+    </section>
+
+    <section id="aluno-dash" class="hidden"></section>
+    <section id="prof-dash" class="hidden"></section>
+</div>
+
+<script src="script.js"></script>
+</body>
+</html>
