@@ -4,16 +4,11 @@ const professores = [
     { id: 3, nome: "Eng. Ricardo Santos", email: "ricardo@conecta.com", senha: "123", materia: "Redes" }
 ];
 
-let todasAulas = JSON.parse(localStorage.getItem('bd_aulas')) || [];
 let alunos = JSON.parse(localStorage.getItem('bd_alunos')) || [];
+let todasAulas = JSON.parse(localStorage.getItem('bd_aulas')) || [];
 let sessao = null;
 
-
-function alternarAuth() {
-    document.getElementById('login-box').classList.toggle('hidden');
-    document.getElementById('reg-box').classList.toggle('hidden');
-}
-
+function alternarAuth() { document.getElementById('login-box').classList.toggle('hidden'); document.getElementById('reg-box').classList.toggle('hidden'); }
 function mostrarAba(aba) {
     document.getElementById('aba-busca').classList.toggle('hidden', aba !== 'busca');
     document.getElementById('aba-historico').classList.toggle('hidden', aba !== 'historico');
@@ -56,7 +51,6 @@ function salvarCadastro() {
     alternarAuth();
 }
 
-// --- FUNÇÕES DO ALUNO ---
 function renderTutores() {
     document.getElementById('lista-tutores').innerHTML = professores.map(p => `
         <div style="border-bottom:1px solid #eee; padding:10px;">
@@ -140,7 +134,6 @@ function enviarAvaliacao(id) {
     alert("Avaliação registrada!");
 }
 
-// --- FUNÇÕES DO PROFESSOR ---
 function renderPainelProfessor() {
     const solicitacoes = todasAulas.filter(a => a.profId === sessao.id);
     document.getElementById('lista-solicitacoes').innerHTML = solicitacoes.map(a => `
