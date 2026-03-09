@@ -1,5 +1,7 @@
 #  Conecta Tutor
+
 Colaboradores:
+
 •	ALEX DOS SANTOS DUTRA
 •	ADRIEL XAVIER PEREIRA DA SILVA
 •	CHRISTYAN ROBERTO SILVA
@@ -35,4 +37,5 @@ Professor Marcos Oliveira marcos@conecta.com senha 123
 Como o projeto utiliza apenas tecnologias front-end nativas, você não precisa instalar dependências:
 
 Clone o repositório:
+
 git clone https://github.com/AlexDutra89/Projeto.git
