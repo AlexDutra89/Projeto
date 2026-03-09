@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Conecta Tutor | Dashboard</title>
+    <title>Conecta Tutor | Gestão de Aulas</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -19,7 +19,6 @@
             <button onclick="fazerLogin()">Entrar</button>
             <button onclick="alternarAuth()" style="background:#666">Criar Conta (Aluno)</button>
         </div>
-
         <div id="reg-box" class="hidden">
             <h2>Cadastro Aluno</h2>
             <input type="text" id="r-nome" placeholder="Nome">
@@ -34,7 +33,6 @@
         <h3>Aluno: <span id="aluno-nome-txt"></span></h3>
         <div class="nav-bar">
             <button onclick="mostrarAba('busca')">🔍 Tutores</button>
-            <button onclick="mostrarAba('historico')">📚 Minhas Aulas</button>
             <button class="btn-logout" onclick="location.reload()">Sair</button>
         </div>
         <div id="aba-busca"><div id="lista-tutores"></div></div>

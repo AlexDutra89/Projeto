@@ -62,3 +62,11 @@ button:hover {
 .btn-logout {
     background: #ef4444;
 }
+
+.item-solicitacao {
+    border: 1px solid #e2e8f0;
+    padding: 15px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+    background: #fdfdfd;
+}

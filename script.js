@@ -1,4 +1,3 @@
-
 const professores = [
     { id: 1, nome: "Prof. Marcos Oliveira", email: "marcos@conecta.com", senha: "123", materia: "Java" }
 ];
@@ -15,7 +14,6 @@ function alternarAuth() {
 function fazerLogin() {
     const e = document.getElementById('l-email').value;
     const s = document.getElementById('l-senha').value;
-    
     const prof = professores.find(p => p.email === e && p.senha === s);
     const aluno = alunos.find(a => a.email === e && a.senha === s);
 
@@ -24,6 +22,7 @@ function fazerLogin() {
         document.getElementById('auth-section').classList.add('hidden');
         document.getElementById('prof-dash').classList.remove('hidden');
         document.getElementById('prof-nome-txt').innerText = prof.nome;
+        renderPainelProfessor();
     } else if (aluno) {
         sessao = aluno;
         document.getElementById('auth-section').classList.add('hidden');
@@ -33,18 +32,6 @@ function fazerLogin() {
     } else {
         alert("Usuário não encontrado.");
     }
-}
-
-function salvarCadastro() {
-    const nome = document.getElementById('r-nome').value;
-    const email = document.getElementById('r-email').value;
-    const senha = document.getElementById('r-senha').value;
-
-    if(!nome || !email || !senha) return alert("Preencha tudo!");
-    alunos.push({ nome, email, senha });
-    localStorage.setItem('bd_alunos', JSON.stringify(alunos));
-    alert("Cadastro concluído!");
-    alternarAuth();
 }
 
 function renderTutores() {
@@ -63,11 +50,44 @@ function agendar(id) {
     const d = document.getElementById('data-'+id).value;
     const h = document.getElementById('hora-'+id).value;
     if(!d) return alert("Escolha uma data!");
-    
-    todasAulas.push({ 
-        id: Date.now(), profId: p.id, profNome: p.nome, aluno: sessao.nome, 
-        data: d, hora: h, status: 'Pendente' 
-    });
+    todasAulas.push({ id: Date.now(), profId: p.id, profNome: p.nome, aluno: sessao.nome, data: d, hora: h, status: 'Pendente', material: '' });
     localStorage.setItem('bd_aulas', JSON.stringify(todasAulas));
-    alert("Aula solicitada com sucesso!");
+    alert("Aula solicitada!");
+}
+
+function renderPainelProfessor() {
+    const minhasSolicitacoes = todasAulas.filter(a => a.profId === sessao.id);
+    document.getElementById('lista-solicitacoes').innerHTML = minhasSolicitacoes.map(a => `
+        <div class="item-solicitacao">
+            <strong>Aluno: ${a.aluno}</strong> | ${a.data} (${a.hora})<br>
+            Status: <strong>${a.status}</strong><br>
+            ${a.status === 'Pendente' ? <button onclick="aceitar(${a.id})">Aceitar Aula</button> : '✅ Aula Confirmada'}
+            <input type="text" id="mat-${a.id}" placeholder="Link do material..." value="${a.material}">
+            <button onclick="enviarMaterial(${a.id})" style="background:#666">Enviar Material</button>
+        </div>
+    `).join('');
+}
+
+function aceitar(id) {
+    todasAulas.find(a => a.id === id).status = 'Confirmada';
+    localStorage.setItem('bd_aulas', JSON.stringify(todasAulas));
+    renderPainelProfessor();
+}
+
+function enviarMaterial(id) {
+    todasAulas.find(a => a.id === id).material = document.getElementById('mat-'+id).value;
+    localStorage.setItem('bd_aulas', JSON.stringify(todasAulas));
+    alert("Material enviado!");
+    renderPainelProfessor();
+}
+
+function salvarCadastro() {
+    const nome = document.getElementById('r-nome').value;
+    const email = document.getElementById('r-email').value;
+    const senha = document.getElementById('r-senha').value;
+    if(!nome || !email || !senha) return alert("Preencha tudo!");
+    alunos.push({ nome, email, senha });
+    localStorage.setItem('bd_alunos', JSON.stringify(alunos));
+    alert("Cadastro concluído!");
+    alternarAuth();
 }
