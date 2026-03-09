@@ -3,37 +3,45 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Conecta Tutor | Projeto Inicial</title>
+    <title>Conecta Tutor | Final</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
-
 <div id="app" style="max-width: 800px; margin: auto;">
     <h1>Conecta Tutor</h1>
-
     <section id="auth-section" class="card">
         <div id="login-box">
             <h2>Login</h2>
             <input type="email" id="l-email" placeholder="E-mail">
             <input type="password" id="l-senha" placeholder="Senha">
             <button onclick="fazerLogin()">Entrar</button>
-            <button onclick="alternarAuth()" style="background:#666">Criar Conta (Aluno)</button>
+            <button onclick="alternarAuth()" style="background:#666">Criar Conta</button>
         </div>
-
         <div id="reg-box" class="hidden">
             <h2>Cadastro Aluno</h2>
             <input type="text" id="r-nome" placeholder="Nome">
             <input type="email" id="r-email" placeholder="E-mail">
             <input type="password" id="r-senha" placeholder="Senha">
-            <button onclick="salvarCadastro()">Finalizar Cadastro</button>
-            <button onclick="alternarAuth()" style="background:#666">Voltar ao Login</button>
+            <button onclick="salvarCadastro()">Cadastrar</button>
+            <button onclick="alternarAuth()" style="background:#666">Voltar</button>
         </div>
     </section>
-
-    <section id="aluno-dash" class="hidden"></section>
-    <section id="prof-dash" class="hidden"></section>
+    <section id="aluno-dash" class="hidden card">
+        <h3>Aluno: <span id="aluno-nome-txt"></span></h3>
+        <div class="nav-bar">
+            <button onclick="mostrarAba('busca')">🔍 Tutores</button>
+            <button onclick="mostrarAba('historico')">📚 Minhas Aulas</button>
+            <button class="btn-logout" onclick="location.reload()">Sair</button>
+        </div>
+        <div id="aba-busca"><div id="lista-tutores"></div></div>
+        <div id="aba-historico" class="hidden"><div id="lista-aulas-aluno"></div></div>
+    </section>
+    <section id="prof-dash" class="hidden card">
+        <h3>Painel do Professor: <span id="prof-nome-txt"></span></h3>
+        <div id="lista-solicitacoes"></div>
+        <button class="btn-logout" onclick="location.reload()">Sair</button>
+    </section>
 </div>
-
 <script src="script.js"></script>
 </body>
 </html>
