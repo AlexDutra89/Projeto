@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Conecta Tutor | Projeto Inicial</title>
+    <title>Conecta Tutor | Dashboard</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
@@ -30,8 +30,21 @@
         </div>
     </section>
 
-    <section id="aluno-dash" class="hidden"></section>
-    <section id="prof-dash" class="hidden"></section>
+    <section id="aluno-dash" class="hidden card">
+        <h3>Aluno: <span id="aluno-nome-txt"></span></h3>
+        <div class="nav-bar">
+            <button onclick="mostrarAba('busca')">🔍 Tutores</button>
+            <button onclick="mostrarAba('historico')">📚 Minhas Aulas</button>
+            <button class="btn-logout" onclick="location.reload()">Sair</button>
+        </div>
+        <div id="aba-busca"><div id="lista-tutores"></div></div>
+    </section>
+
+    <section id="prof-dash" class="hidden card">
+        <h3>Painel do Professor: <span id="prof-nome-txt"></span></h3>
+        <div id="lista-solicitacoes"></div>
+        <button class="btn-logout" onclick="location.reload()">Sair</button>
+    </section>
 </div>
 
 <script src="script.js"></script>
