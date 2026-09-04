@@ -11,7 +11,7 @@ Colaboradores:
 
 O *Conecta Tutor* é uma plataforma que tem como objetivo conectar alunos com dificuldades em determinadas matérias e professores voluntários . O projeto foca em uma experiência simples, funcional e direta.
 
-## 🚀 Funcionalidades Principais (Em desenvolvimento):
+**Funcionalidades Principais (Em desenvolvimento):**
 
 - *Sistema de Autenticação:* Login e cadastro diferenciado para alunos e professores.
 - *Agendamento de Aulas:* Alunos podem escolher tutores por matéria, datas e horários disponíveis.
@@ -19,7 +19,7 @@ O *Conecta Tutor* é uma plataforma que tem como objetivo conectar alunos com di
 - *Interação e Feedback:* Campos para descrição de dúvidas, envio de atividades e avaliação por estrelas.
 - *Certificação:* Emissão de certificados de conclusão pelo tutor.
 
-## 🛠️ Tecnologias Utilizadas
+**Tecnologias Utilizadas**
 
 Este projeto utiliza o "trio fundamental" do desenvolvimento web, sem dependências externas:
 
@@ -33,7 +33,7 @@ Dra. Elen Silva elen@conecta.com senha 123
 Eng. Ricardo Santos ricardo@conecta.com senha 123
 Professor Marcos Oliveira marcos@conecta.com senha 123
 
-## 📂 Como rodar o projeto
+**Como rodar o projeto**
 Como o projeto utiliza apenas tecnologias front-end nativas, você não precisa instalar dependências:
 
 Clone o repositório:
