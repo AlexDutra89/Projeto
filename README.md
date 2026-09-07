@@ -39,14 +39,16 @@ Este projeto utiliza o "trio fundamental" do desenvolvimento web, sem frameworks
 O código JavaScript é dividido em módulos, um por funcionalidade, para facilitar o trabalho em equipe:
 
 ```
+js/
+ ├── agendamento.js      -> filtro de tutores e agendamento com validação de conflito
+ ├── certificado.js      -> emissão de certificado em PDF e contador de pendências
+ ├── chat.js             -> chat simples entre aluno e professor por aula
+ ├── core.js             -> dados, navegação, autenticação e renderização base
+ └── disponibilidade.js  -> cadastro de horários livres pelo professor
+video/
+ └── video_conectatutor.mp4 -> vídeo de apresentação do projeto (1:05)
 index.html
 style.css
-js/
-├── core.js            → dados, navegação, autenticação e renderização base
-├── disponibilidade.js → cadastro de horários livres pelo professor
-├── agendamento.js     → filtro de tutores e agendamento com validação de conflito
-├── chat.js            → chat simples entre aluno e professor por aula
-└── certificado.js     → emissão de certificado em PDF e contador de pendências
 ```
 
 * Existem 3 tutores fictícios cadastrados na plataforma para testar as funcionalidades:
