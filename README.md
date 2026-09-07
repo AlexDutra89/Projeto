@@ -50,9 +50,15 @@ js/
 ```
 
 * Existem 3 tutores fictícios cadastrados na plataforma para testar as funcionalidades:
-Dra. Elen Silva elen@conecta.com senha 123
-Eng. Ricardo Santos ricardo@conecta.com senha 123
-Professor Marcos Oliveira marcos@conecta.com senha 123
+
+- Eng. Ana Souza - ana@conecta.com - senha: 123
+- Dra. Elen Silva - elen@conecta.com - senha: 123
+- Professor Marcos Oliveira - marcos@conecta.com - senha: 123
+
+Os alunos não são fixos na plataforma. Para testar o fluxo de aluno, basta clicar em "Criar Conta" e criar uma nova conta. Sugestão de contas para teste (ou crie a sua):
+
+- Lucas Gonçalves - lucas@gmail.com - senha: 123
+- Pedro Silva - pedrosilva@gmail.com - senha: 123
 
 **Como rodar o projeto**
 

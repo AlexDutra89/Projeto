@@ -8,9 +8,9 @@
    ========================================================================= */
 
 const professores = [
-    { id: 1, nome: "Prof. Marcos Oliveira", email: "marcos@conecta.com", senha: "123", materia: "Java" },
-    { id: 2, nome: "Dra. Elen Silva", email: "elen@conecta.com", senha: "123", materia: "Web" },
-    { id: 3, nome: "Eng. Ricardo Santos", email: "ricardo@conecta.com", senha: "123", materia: "Redes" }
+    { id: 1, nome: "Eng. Ana Souza", email: "ana@conecta.com", senha: "123", materia: "Redes" },
+    { id: 2, nome: "Prof. Marcos Oliveira", email: "marcos@conecta.com", senha: "123", materia: "Java" },
+    { id: 3, nome: "Dra. Elen Silva", email: "elen@conecta.com", senha: "123", materia: "Web" },
 ];
 
 let alunos = JSON.parse(localStorage.getItem('bd_alunos')) || [];
