@@ -66,4 +66,4 @@ Depois, é só abrir o arquivo `index.html` no navegador (ou usar a extensão Li
 
 **Acesso online**
 
-Link do protótipo publicado: [inserir link do GitHub Pages após a publicação]
+Link do protótipo publicado: https://alexdutra89.github.io/projeto-integrador-senac/
