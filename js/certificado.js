@@ -35,7 +35,7 @@ function gerarPDF(aula) {
 
     doc.setFontSize(14);
     doc.text(`Certificamos que ${aula.aluno}`, 105, 70, { align: "center" });
-    doc.text(`concluiu a aula de tutoria com ${aula.profNome}`, 105, 80, { align: "center" });
+    doc.text(`concluiu 1h de aula de tutoria com ${aula.profNome}`, 105, 80, { align: "center" });
     doc.text(`realizada em ${aula.data} às ${aula.hora}.`, 105, 90, { align: "center" });
 
     doc.setFontSize(11);
